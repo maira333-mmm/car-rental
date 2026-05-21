@@ -1,0 +1,23 @@
+export default function About() {
+  return (
+    <>
+      {/* Header is already in App.tsx, so we don't need to repeat it */}
+      
+      <div className="about-container-classic">
+        <br /><br />
+        <h1>About Us</h1>
+        
+        <div className="about-classic">
+          <img src="/pic/crent.jpg" alt="Car Rental Image" />
+          <p>Founded in 2024, our car rental service aims to revolutionize the way people rent vehicles in Pakistan. Our mission is to provide a seamless online experience, allowing customers to easily book cars that meet their needs.</p>
+          <p>Our platform is designed to assist users in selecting from a diverse range of vehicles while ensuring the highest quality of service. We believe in building a community around car rental that fosters trust and convenience.</p>
+          <p>With a user-friendly interface and dedicated customer support, we aim to cater to everyone's automotive needs, whether it's for leisure or business purposes. Our extensive range of vehicles is just a click away!</p>
+        </div>
+
+        <div className="quote-classic">
+          <p>“THINK renting, THINK CaRS!”</p>
+        </div>
+      </div>
+    </>
+  );
+}

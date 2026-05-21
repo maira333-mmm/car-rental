@@ -1,0 +1,930 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2e2e2e, #000000, #ff0000);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ========== HEADER STYLES - FOR ALL PAGES ========== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    padding: 3px 0;
+    z-index: 1000;
+}
+
+header nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo {
+    width: 80px;
+}
+
+header nav .menu a {
+    color: #fff;
+    margin-left: 20px;
+    position: relative;
+    text-decoration: none;
+}
+
+nav .menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #dd0707;
+    transition: 0.4s;
+}
+
+nav .menu a:hover::after {
+    width: 100%;
+}
+
+/* Social Media Icons */
+.social a i {
+    color: #fff;
+    font-size: 22px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.social a i:hover {
+    transform: scale(1.3);
+    color: #dd0707;
+}
+
+/* Sign Up Button Styling */
+.sign-up {
+    background-color: #dd0707;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.sign-up:hover {
+    background-color: #ff0000;
+}
+
+.sign-up:hover::after {
+    width: 0 !important;
+}
+
+/* ========== HOME PAGE SPECIFIC STYLES ========== */
+/* Background Toggle */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.bg-light {
+    background-image: url('/bg-light.jpg');
+}
+
+.bg-dark {
+    background-image: url('/bg.jpg');
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero .text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h4 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 1rem 0;
+    color: #ffffff;
+}
+
+.hero .red {
+    color: #dd0707;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Booking Form Container */
+.booking-form-container {
+    max-width: 1000px;
+    margin: -50px auto 50px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.booking-form-container form {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.booking-form-container .form-field {
+    flex: 1;
+    min-width: 150px;
+}
+
+.booking-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.booking-form-container input,
+.booking-form-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+}
+
+.submit-btn {
+    background: #dd0707;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #bb0505;
+}
+
+/* Popular Choices Section */
+.popular-choices-section {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.popular-choices-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.image-container ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.image-wrapper {
+    text-align: center;
+    cursor: pointer;
+}
+
+.image-wrapper img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.car-name {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Benefits Section */
+.benefits-faq-section {
+    padding: 50px 5%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.benefits-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.benefit-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+    color: #dd0707;
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    color: #ffffff;
+}
+
+/* ========== SERVICES PAGE STYLES ========== */
+.page-header {
+    background: #dd0707;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.page-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.page-header p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.25rem;
+    color: white;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.listing-page {
+    padding: 50px 0;
+}
+
+.card {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body ul li i {
+    color: white;
+}
+
+.card-body .card-title, 
+.card-body .list-price {
+    color: white;
+}
+
+.list-price {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.card-body ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.card-body ul li {
+    display: inline-block;
+    margin-right: 15px;
+    color: white;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.sidebar_widget h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.sidebar_widget {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+    background-color: #c20606;
+    border-color: #c20606;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #a00505;
+    border-color: #a00505;
+}
+
+/* ========== ABOUT PAGE - EXACT ORIGINAL STYLE ========== */
+.about-container-classic {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 20px;
+}
+
+.about-container-classic h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.about-classic {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.about-classic p {
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.about-classic p:last-child {
+    margin-bottom: 0;
+}
+
+.quote-classic {
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #dd0707;
+}
+
+.about-classic img {
+    display: block;
+    max-width: 60%;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+/* ========== CONTACT PAGE STYLES ========== */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 80px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    gap: 30px;
+}
+
+.contact-form, .contact-info {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form h2, .contact-info h2 {
+    font-size: 24px;
+    color: #dd0707;
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.contact-form select option {
+    background-color: #333;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #dd0707;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: #bb0505;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.contact-info h3 {
+    color: #dd0707;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.operating-hours {
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+/* ========== CAR DETAIL PAGE STYLES ========== */
+.car-info { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    background-color: black; 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 40px; 
+}
+
+.carousel { 
+    position: relative; 
+    flex: 0 0 60%;
+    cursor: pointer; 
+    margin-right: 20px;
+}
+.carousel img { 
+    width: 100%; 
+    height: 400px;
+    object-fit: cover; 
+    border-radius: 8px; 
+    border: 1px solid black; 
+}
+
+.details {
+    flex: 1;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 0px solid #dd0707;
+}
+
+.details h2, .booking-form h2 { 
+    margin-bottom: 15px; 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #dd0707;
+}
+
+.details p {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.feature { 
+    display: flex; 
+    align-items: center; 
+    margin: 5px 0; 
+    font-size: 18px; 
+}
+.feature span { 
+    margin-right: 8px; 
+    font-size: 20px; 
+    color: #dd0707;
+}
+.feature p {
+    margin: 0;
+    color: white;
+}
+
+.booking-form {
+    padding: 20px; 
+    background-color: transparent; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border: 1px solid #dd0707;
+}
+.booking-form input, .booking-form select, .booking-form textarea { 
+    padding: 10px; 
+    margin-top: 5px; 
+    margin-bottom: 15px; 
+    border-radius: 4px; 
+    border: 1px solid #ddd; 
+    width: 100%; 
+    font-size: 16px; 
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+.booking-form label {
+    color: white;
+}
+button { 
+    padding: 12px; 
+    color: white; 
+    background-color: #dd0707;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 18px; 
+    width: 100%; 
+    margin-top: 20px; 
+}
+button:hover { 
+    background-color: #b50606;
+}
+
+/* ========== SIGN IN PAGE STYLES ========== */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px;
+    background: linear-gradient(135deg, #2e2e2e, #000000, #ff0000);
+}
+
+.signin-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+}
+
+.signin-box h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.signin-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-box label {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.signin-box input[type="email"],
+.signin-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.signin-box button {
+    padding: 10px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.signin-box button:hover {
+    background-color: #cc0000;
+}
+
+.signin-box p {
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.signin-box a {
+    color: #ff0000;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ========== SIGN UP PAGE STYLES ========== */
+.signup-body {
+    background: linear-gradient(135deg, #2e2e2e, #000000, #ff0000);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+}
+
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.signup-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.signup-container label {
+    color: #fff;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"],
+.signup-container input[type="tel"],
+.signup-container input[type="number"],
+.signup-container select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 3px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.gender-section {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 12px;
+}
+
+.button {
+    padding: 8px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 13px;
+    width: 100%;
+    transition: background-color 0.4s;
+}
+
+.button:hover {
+    background-color: #cc0000;
+}
+
+.home-link {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.home-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.4s, padding 0.4s;
+    display: inline-block;
+}
+
+.home-link a:hover {
+    background-color: #cc0000;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    color: #fff;
+}
+
+td {
+    padding: 4px;
+}
+
+/* ========== FOOTER STYLES ========== */
+footer {
+    background-color: #000000;
+    padding: 1rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    color: #dd0707;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    color: #dd0707;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #444;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-form, .contact-info {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .car-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel {
+        flex: 1 0 100%;
+        margin-right: 0;
+    }
+    .booking-form-container form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .image-container ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .benefits-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav .menu a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    .listing-page .col-md-9,
+    .listing-page .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .card .row.no-gutters {
+        flex-direction: column;
+    }
+    .card-img {
+        height: 180px;
+    }
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .social {
+        margin-top: 5px;
+    }
+    .about-classic img {
+        max-width: 100%;
+    }
+}
