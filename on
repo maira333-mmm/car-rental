@@ -1,0 +1,5 @@
+[33m0114815[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Merge remote changes
+[33md550763[m Fix build permissions
+[33m9e811a5[m Update installCommand to use legacy-peer-deps
+[33m1ee8b68[m Update package.json
+[33ma51dd6d[m Change strict mode to false in tsconfig.json
