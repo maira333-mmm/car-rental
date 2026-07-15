@@ -4,8 +4,7 @@
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=2800&pause=700&color=2563EB&center=true&vCenter=true&repeat=true&width=700&height=52;AI-Powered+Car+Rental+System.;Google+Gemini+AI+Integration+for+Recommendations.;Smart+Price+Calculator+%7C+Booking+Management.;React+%7C+TypeScript+%7C+Framer+Motion." alt="Typing Animation" />
-
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=2800&pause=700&color=2563EB&center=true&vCenter=true&repeat=true&width=700&height=52&lines=AI-Powered+Car+Rental+System.;Google+Gemini+AI+Integration+for+Recommendations.;Smart+Price+Calculator+%7C+Booking+Management.;React+%7C+TypeScript+%7C+Framer+Motion." alt="Typing Animation" />
 <br><br>
 
 A modern **AI-Powered Car Rental System** built with **React, TypeScript, and Google Gemini AI**. Features intelligent car recommendations, dynamic price calculation with discounts, and a seamless booking experience.
@@ -469,21 +468,32 @@ Open Pull Request
 
 ---
 
+
 # 📬 Contact
+
 
 <div align="center">
 
-### 👩‍💻 Maira Alam
+## 👩‍💻 Maira Alam
 
-📧 **Email:** maira.alam33@gmail.com
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=maira.alam33@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+</a>
 
-🐙 **GitHub:** https://github.com/maira333-mmm
+<a href="https://github.com/maira333-mmm">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
-💼 **LinkedIn:** https://www.linkedin.com/in/maira-a-48699630b/
+<a href="https://www.linkedin.com/in/maira-a-48699630b/">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
 
-🌐 **Portfolio:** https://maira-alam-o2p20gi.gamma.site/
+<a href="https://maira-alam-o2p20gi.gamma.site/">
+<img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+</a>
 
 </div>
+
 
 ---
 
@@ -566,12 +576,11 @@ npm run build
 Made with 💙 by **Maira Alam**
 
 ⭐ **If you found this project helpful, consider giving it a Star!**
+## 🚀 Live Demo
 
-**Live Demo**
-
-https://car-rental-jh7y.vercel.app
-
-</div>
+<a href="https://car-rental-jh7y.vercel.app">
+  <img src="https://img.shields.io/badge/🌐_LIVE_DEMO-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"/>
+</a>
 
 
 
